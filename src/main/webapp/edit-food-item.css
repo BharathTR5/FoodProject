@@ -1,0 +1,50 @@
+.maindiv{
+	border:2px solid yellowgreen;
+	border-radius:20px;
+	display:inline-block;
+	margin:30px 0px 0px 530px;
+	padding:30px; 
+}
+.input{
+	margin:10px 0px 0px 50px;
+	font-size:15px;
+}
+#id{
+	margin-left:29px;
+}
+#cost{
+	margin-left:12px;
+}
+#type{
+	margin-left:6px;
+}
+#stock{
+	margin-left:5px;	
+}
+label{
+	font-size:20px;
+	margin:0;
+}
+#picture{
+	margin-left:90px;
+}
+img{
+	position:absolute;
+	top:302px;
+	left:980px;
+	box-shadow:2px 2px 20px black;
+	border-radius:10px;
+}
+#update{
+	background-color:yellowgreen;
+	color:white;
+	border:none;
+	border-radius:20px;
+	cursor:pointer;
+	font-size:20px;
+	padding:10px;
+}
+#update:hover{
+	background-color:green;
+	font-size:21px;
+}

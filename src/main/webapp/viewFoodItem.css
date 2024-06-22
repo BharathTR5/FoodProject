@@ -1,0 +1,38 @@
+body{
+	background-image: url(baaleEle.jpg);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover; 
+	background-attachment: fixed; 
+	opacity:100%;
+}
+
+.item{
+	padding:20px;
+	font-size: 40px;	
+}
+button{
+		font-size: 30px;
+		border:none;
+		border-radius:20px;
+		background-color:yellowgreen;
+		color:white;
+		cursor:pointer;
+		padding:10px;
+}
+button:hover{
+		font-size: 31px;
+		background-color:green;
+}
+img{
+	padding-right:100px;
+	border-radius:20px;
+}
+td{
+	color:white;
+}
+tr{
+	box-shadow:5px 5px 10px black;
+	text-shadow:5px 5px 5px black;
+	border-radius:20px;
+}

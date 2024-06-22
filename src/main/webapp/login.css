@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+#maindiv{
+	display:flex;
+	justify-content:center;  
+	margin:20px;
+	padding:20px;
+}
+#childdiv{
+	border:2px solid blue;
+	border-radius:50px;
+	width:270px;
+	padding:50px;
+}
+#hotellogin{
+	color:red;
+	text-decoration: none;
+}
+#customerlogin{
+	color:red;
+	text-decoration:none;
+}

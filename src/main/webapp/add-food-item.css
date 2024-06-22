@@ -1,0 +1,14 @@
+.add-food-div{
+	display:inline-block;
+	border: 2px solid green;
+	border-radius: 10px;
+	margin-left:550px;
+	margin-top:70px;
+	padding:30px;
+}
+.food-item-input{
+	margin:10px;
+}
+#cost{
+	margin-left:20px;
+}

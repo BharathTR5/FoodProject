@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Food Item</title>
+<link rel="stylesheet" type="text/css" href="add-food-item.css">
+</head>
+<body>
+	<div class="add-food-div">
+		<h1>Enter Food Details</h1>
+		
+		<form action="AddFood" method="post" enctype="multipart/form-data">
+			Name: <input type="text" name="name" class="food-item-input" ><br>
+			Cost: <input type="text" name="price" class="food-item-input" id="cost" required="required"><br>
+			Type: <input type="radio" name="type" value="veg" class="food-item-input">Veg
+				  <input type="radio" name="type" value="non-veg" class="food-item-input">Non-Veg <br>
+			Stock: <input type="number" name="stock" class="food-item-input"> <br>
+			Picture: <input type="file" name="image" class="food-item-input"> <br>
+			<input type="submit" class="food-item-input">
+		</form>
+		
+	</div>
+</body>
+</html>

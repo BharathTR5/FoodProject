@@ -1,0 +1,16 @@
+.customer-buttons{
+	font-size:20px;
+	color:white;
+	background-color:orange;
+	border:none;
+	border-radius:15px;
+	padding:10px;
+	cursor:pointer;
+}
+.customer-buttons:hover{
+	background-color:rgb(235, 98, 40);
+}
+.buttons-div{
+	display:flex;
+	justify-content: space-evenly;
+}

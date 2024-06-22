@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+#maindiv{
+	 display:flex; 
+	 justify-content:center;
+	 margin:20px;
+	 padding:20px;
+}
+#div2{
+	border:2px solid blue;
+	border-radius:50px;
+	width:270px;
+	padding:50px;
+}
+h2{
+	color:blue;
+}
