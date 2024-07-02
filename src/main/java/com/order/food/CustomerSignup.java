@@ -9,12 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.database.connect.Cart;
 import com.database.connect.Customer;
+import com.database.connect.Order;
 
 import dao.myDAO;
 
 @WebServlet("/Signupcustomer")
 public class CustomerSignup extends HttpServlet{
+	private List<Order> arrayList;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.getRequestDispatcher("/Signupcustomer.html").forward(req, resp);
@@ -31,7 +34,7 @@ public class CustomerSignup extends HttpServlet{
 
 		List<Customer> list = dao.findCustomerByEmail(email);
 		if(list.isEmpty()) {
-			Customer c = new Customer(name, email, password, mno, address);
+			Customer c = new Customer(name, email, password, mno, address, new Cart(), arrayList);
 
 			dao.saveCustomer(c);
 			resp.getWriter().print("<p align='center' style='color:green;'>Your account created successfully<p>");

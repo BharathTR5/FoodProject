@@ -8,13 +8,15 @@
 <body>
 	<div id='maindiv' >
 		<div id="div2" style="width:280px;">
-			<form action='HotelSignup' method="post">
+		<form action="HotelSignup" method="post" enctype="multipart/form-data">
 			<h2>Hotel signup</h2> <br>
 			<label>Hotel Name: </label> <input type="text" name="name" > <br>
-			<label>E-mail Id:</label> <input type="email" name="email" style='margin:10px 0px 0px 16px'> <br>
+			<label>E-mail Id:</label> <input type="email" name="email" style='margin:10px 0px 0px 16px' required> <br>
+			<label>Mobile No:</label> <input type="tel" maxlength="10" minlength="10" name="mobileno" style='margin:10px 0px 0px 16px'>
 			<label>Address:</label> <textarea rows="2" cols="20" name="address" style='margin:10px 0px 0px 24px'></textarea> <br>
 			<label>GSTIN No:</label> <input type="text" name="GSTINNO" style='margin:10px 0px 0px 6px'>
 			<label>Password:</label> <input type="password" name="password" style='margin:10px 0px 20px 15px'> <br>
+			<label>Picture:</label>  <input type="file" name="photo" class="food-item-input"> <br>
 			<input type="submit"> <input type="reset"> <br> <br>
 				<a href="HotelLogin" style='text-decoration:none; color:purple'>Already Have Account? - Click here Login</a> <br>
 				<a href="Signupcustomer" id="customersignup" style='text-decoration:none; color:blue'>Click Here to Signup as Customer</a>

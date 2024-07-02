@@ -25,18 +25,14 @@ public class AddFoodItem extends HttpServlet{
 		Hotel hotel=(Hotel) session.getAttribute("hotel");
 		if ( hotel != null) {
 			req.getRequestDispatcher("add-food-item.html").forward(req, resp);
-		} else {
-			resp.getWriter().print("<h1 align='center' style='color:red'>Invalid Session</h1>");
-			req.getRequestDispatcher("HotelLogin.html").include(req, resp);
 		}
 	}
-
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session=req.getSession();
 		Hotel hotel=(Hotel) session.getAttribute("hotel");
 		
-		if (hotel != null) {
 			String name = req.getParameter("name");
 			double price = Double.parseDouble(req.getParameter("price"));
 			String type = req.getParameter("type");
@@ -59,9 +55,5 @@ public class AddFoodItem extends HttpServlet{
 
 			resp.getWriter().print("<h1 align='center' style='color:green'>Food Item Added Success</h1>");
 			req.getRequestDispatcher("Hotel-home.html").include(req, resp);
-		} else {
-			resp.getWriter().print("<h1 align='center' style='color:red'>Invalid Session</h1>");
-			req.getRequestDispatcher("HotelLogin.html").include(req, resp);
-		}
 	}
 }

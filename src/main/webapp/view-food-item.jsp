@@ -14,18 +14,11 @@
 	<%
 	List<FoodItem> foodItems = (List<FoodItem>) request.getAttribute("foodItems");
 	%>
+		<h1>Added Items</h1>
+		<a href="Hotel-home.html"><button style="margin-left: 40px">Back</button></a>
 	<div align="center">
-		<table>
-			<tr>
-			<!--<th>Image</th>
-				<th>Details</th>
-				<th>Stock</th>
-				<th>Price</th>
-				<th>Hotel Name</th>
-				<th>Edit</th>
-				<th>Delete</th> -->
-			</tr>
-
+		<table cellspacing="30px">
+		<tbody>
 			<%
 			for (FoodItem item : foodItems) {
 			%>
@@ -34,7 +27,7 @@
 				<td class="item">
 				Name: <%=item.getName()%> <br>
 				Type: <%=item.getType()%> <br>
-				Hotel Name: <%=item.getHotel().getName()%> <br>
+				Hotel: <%=item.getHotel().getName()%> <br>
 				Stock: <%=item.getStock()%> <br>
 				Price: Rs.<%=item.getPrice()%> <br>
 					
@@ -45,7 +38,7 @@
 			<%
 			}
 			%>
-
+			</tbody>
 		</table>
 	</div>
 </body>

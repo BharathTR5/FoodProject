@@ -35,7 +35,8 @@ public class HotelLogin extends HttpServlet {
 		}
 		else if(password.equals(list.get(0).getPassword())) {
 			req.getSession().setAttribute("hotel", list.get(0));
-			resp.getWriter().print("<p align='center' style='color:green;'>Login Success</p>");
+			String hotelName = list.get(0).getName();
+			resp.getWriter().print("<p align='center' style='color:green;'>Welcome "+hotelName+"</p>");
 			req.getRequestDispatcher("Hotel-home.html").include(req, resp);
 		}
 		else {

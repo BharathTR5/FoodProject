@@ -38,3 +38,17 @@ div{
 	cursor: pointer;
 	padding: 10px 20px 10px 20px;
 }
+#viewmenu{
+	margin:25px 10px 10px 5px; 
+	font-size:1em; 
+	background-color:yellowgreen; 
+	color:white; 
+	border-radius:40px;
+	border:1px solid white; 
+	cursor: pointer;
+	padding: 10px 20px 10px 20px;
+}
+#viewmenu:hover{
+	background-color: rgb(123, 164, 40);;
+	font-size: 1.3em;
+}

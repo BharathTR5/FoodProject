@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
+import com.database.connect.Cart;
+import com.database.connect.CartItem;
 import com.database.connect.Customer;
 import com.database.connect.FoodItem;
 //import com.database.connect.FoodItem;
@@ -59,8 +61,41 @@ public class myDAO {
 		transaction.commit();
 	}
 
-	
 	public FoodItem fetchFoodById(int id) {
 		return manager.find(FoodItem.class, id);
+	}
+	
+	
+	public List<Hotel> fetchAllHotels() {
+		return manager.createQuery("select x from Hotel x").getResultList();
+	}
+
+	public void updateCustomer(Customer customer) {
+		transaction.begin();
+		manager.merge(customer);
+		transaction.commit();
+	}
+	public void updateCartItem(CartItem cartItem) {
+		transaction.begin();
+		manager.merge(cartItem);
+		transaction.commit();
+	}
+
+	public void deleteCartItem(CartItem cartItem) {
+		transaction.begin();
+		manager.remove(cartItem);
+		transaction.commit();
+	}
+
+	public CartItem findCartItemById(int id) {
+		return manager.find(CartItem.class, id);
+	}
+	public void updateCart(Cart cart) {
+		transaction.begin();
+		manager.merge(cart);
+		transaction.commit();
+	}
+	public List<FoodItem> fetchAllFood(int id) {
+		return manager.createQuery("select x from FoodItem x where hotel_id=?1").setParameter(1, id).getResultList();
 	}
 }

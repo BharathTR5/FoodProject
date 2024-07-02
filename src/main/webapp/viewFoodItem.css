@@ -1,3 +1,7 @@
+*{
+	margin:0;
+	padding:0;
+}
 body{
 	background-image: url(baaleEle.jpg);
 	background-repeat:no-repeat;
@@ -5,6 +9,8 @@ body{
 	background-size: cover; 
 	background-attachment: fixed; 
 	opacity:100%;
+	margin:0;
+	padding:0;
 }
 
 .item{
@@ -15,24 +21,40 @@ button{
 		font-size: 30px;
 		border:none;
 		border-radius:20px;
-		background-color:yellowgreen;
+		background-color:red;
 		color:white;
 		cursor:pointer;
 		padding:10px;
 }
 button:hover{
 		font-size: 31px;
-		background-color:green;
+		background-color:hotpink;
 }
 img{
-	padding-right:100px;
+	padding:10px;
 	border-radius:20px;
 }
 td{
 	color:white;
 }
 tr{
-	box-shadow:5px 5px 10px black;
+	box-shadow:0px 0px 20px white, 0px 0px 20px white;
 	text-shadow:5px 5px 5px black;
 	border-radius:20px;
+	display:flex;
+	flex-direction:column;
+	margin:6px;
+}
+h1{
+	text-align:center;
+	color:white;
+	font-size:40px;
+	text-shadow:2px 2px 30px black;
+}
+tbody{
+	display:grid;
+	grid-template-columns: repeat(3,34%);
+}
+#cart-buttons-view-by-hotel{
+	display: flex;
 }

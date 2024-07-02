@@ -24,7 +24,6 @@ public class CustomerLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email = req.getParameter("email");
 		String Password = req.getParameter("password");
-		System.out.println("email : " + email + "\n" + "Password : " + Password);
 
 		myDAO dao = new myDAO();
 
@@ -35,9 +34,10 @@ public class CustomerLogin extends HttpServlet {
 					.print("<p align='center' style='color:red; position:relative; top:15%;'>Invalid Email</p>");
 			req.getRequestDispatcher("Login.html").include(req, resp);
 		} else if (Password.equals(list.get(0).getPassword())) {
-			
+			req.getSession().setAttribute("customer", list.get(0));
+			String name=list.get(0).getName();
 			resp.getWriter().print(
-					"<p align='center' style='color:green;' class='fadeOut'>Login Success</p>");
+					"<p align='center' style='color:darkgreen; font-size:30px; text-decoration:bold;' class='fadeOut'>Welcome "+name+"</p>");
 			req.getRequestDispatcher("Customer-Home.html").include(req, resp);
 		} else {
 			resp.getWriter().print("<p  align='center' style='color:red;'>Invalid Password</p>");
